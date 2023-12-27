@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { bodyFont, inter } from './config/fonts'
+import { bodyFont, inter } from '../config/fonts'
 
 
 export const metadata: Metadata = {

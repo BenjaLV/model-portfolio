@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { IoLogoInstagram } from "react-icons/io5";
 import { SiVsco } from "react-icons/si";
 
-import { bodyFont, titleFont } from '@/app/config/fonts'
+import { bodyFont, titleFont } from '@/config/fonts'
 import { useUIStore } from '@/store/ui/store';
 
 
