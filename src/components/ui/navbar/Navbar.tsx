@@ -29,7 +29,7 @@ const Navbar = () => {
 
             {/* logo */}
             <div>
-                <Link href='/home'>
+                <Link href='/'>
                     <span className={`${titleFont.className} antialiased font-extrabold text-2xl`}>
                         Benjamín La Valla
                     </span>
@@ -66,7 +66,7 @@ const Navbar = () => {
 
             {
                 isSideMenuOpen && (
-                    <div className='min-w-[70vw] justify-between z-30 items-center fixed top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 bg-black/60 rounded-lg backdrop-blur-md py-32'>
+                    <div className='min-w-[70vw] justify-between z-30 items-center fixed top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 bg-black/60 rounded-lg xpy-32'>
                         <nav className='flex items-center flex-col justify-center'>
                             <Link href='/about' className='m-1 p-1 text-md transition-all font-medium text-white'>
                                 About
