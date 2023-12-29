@@ -11,7 +11,9 @@ function PhotosGrid({ photos }: Props) {
         <div className='grid grid-cols-1 sm:grid-cols-2'>
             {
                 photos.map(photo => (
-                    <PhotoGridItem key={photo.slug} photo={photo} />
+                    <div className='my-1 mx-1'>
+                        <PhotoGridItem key={photo.slug} photo={photo} />
+                    </div>
                 ))
             }
         </div>

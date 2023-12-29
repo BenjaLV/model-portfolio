@@ -30,7 +30,7 @@ const Navbar = () => {
             {/* logo */}
             <div>
                 <Link href='/'>
-                    <span className={`${titleFont.className} antialiased font-extrabold text-2xl`}>
+                    <span className={`${titleFont.className} antialiased font-extrabold text-2xl text-white`}>
                         Benjamín La Valla
                     </span>
                 </Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
 
             {/* menu  */}
 
-            <div className='hidden sm:flex items-center'>
+            <div className='hidden sm:flex items-center text-white'>
                 <Link href='/about' className='m-1 p-1 text-md transition-all font-light'>
                     About
                 </Link>
@@ -58,29 +58,29 @@ const Navbar = () => {
 
             <div className='sm:hidden'>
                 <button className='absolute mb-1 right-6 flex-col justify-center items-center' onClick={handleButtonClick}>
-                    <span className={`bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isSideMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-                    <span className={`bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isSideMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                    <span className={`bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isSideMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
+                    <span className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isSideMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
+                    <span className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isSideMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                    <span className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isSideMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
                 </button>
             </div>
 
             {
                 isSideMenuOpen && (
-                    <div className='min-w-[70vw] justify-between z-30 items-center fixed top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 bg-black/60 rounded-lg xpy-32'>
-                        <nav className='flex items-center flex-col justify-center'>
-                            <Link href='/about' className='m-1 p-1 text-md transition-all font-medium text-white'>
+                    <div className='min-w-[70vw] min-h-[60vw]  justify-between z-30 items-center fixed top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 bg-white/60 rounded-lg py-20'>
+                        <nav className='flex items-center flex-col justify-center my-8 py-1'>
+                            <Link href='/about' className=' text-md transition-all font-medium text-black'>
                                 About
                             </Link>
-                            <Link href='mailto:benjalavalla@gmail.com' className='m-1 p-1 text-md transition-all font-medium text-white'>
+                            <Link href='mailto:benjalavalla@gmail.com' className='text-md transition-all font-medium text-black'>
                                 Contact
                             </Link>
                         </nav>
-                        <nav className='mt-1 flex justify-center'>
-                            <Link href='https://www.instagram.com/benjalavalla/' target='_blank' className='mx-1 text-white'>
+                        <nav className='relative flex justify-center bottom-5'>
+                            <Link href='https://www.instagram.com/benjalavalla/' target='_blank' className='mx-1 text-black'>
                                 <IoLogoInstagram size={20} />
                             </Link>
 
-                            <Link href='https://vsco.co/benjalavalla/gallery' target='_blank' className='mx-1 text-white'>
+                            <Link href='https://vsco.co/benjalavalla/gallery' target='_blank' className='mx-1 text-black'>
                                 <SiVsco size={20} />
                             </Link>
                         </nav>
