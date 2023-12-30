@@ -24,7 +24,7 @@ export const data: SeedData = {
     },
     {
       images: ["IMG_1622.JPG"],
-      slug: "img_5_2022",
+      slug: "img_arms_2022",
     },
 
     {
