@@ -68,19 +68,19 @@ const Navbar = () => {
                 isSideMenuOpen && (
                     <div className='min-w-[70vw] min-h-[60vw]  justify-between z-30 items-center fixed top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 bg-white/60 rounded-lg py-20'>
                         <nav className='flex items-center flex-col justify-center my-8 py-1'>
-                            <Link href='/about' className=' text-md transition-all font-medium text-black'>
+                            <Link href='/about' className=' text-md transition-all font-medium text-black' onClick={closeMenu}>
                                 About
                             </Link>
-                            <Link href='mailto:benjalavalla@gmail.com' className='text-md transition-all font-medium text-black'>
+                            <Link href='mailto:benjalavalla@gmail.com' className='text-md transition-all font-medium text-black' onClick={closeMenu}>
                                 Contact
                             </Link>
                         </nav>
                         <nav className='relative flex justify-center bottom-5'>
-                            <Link href='https://www.instagram.com/benjalavalla/' target='_blank' className='mx-1 text-black'>
+                            <Link href='https://www.instagram.com/benjalavalla/' target='_blank' className='mx-1 text-black' onClick={closeMenu}>
                                 <IoLogoInstagram size={20} />
                             </Link>
 
-                            <Link href='https://vsco.co/benjalavalla/gallery' target='_blank' className='mx-1 text-black'>
+                            <Link href='https://vsco.co/benjalavalla/gallery' target='_blank' className='mx-1 text-black' onClick={closeMenu}>
                                 <SiVsco size={20} />
                             </Link>
                         </nav>

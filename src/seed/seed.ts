@@ -9,7 +9,6 @@ interface SeedData {
 
 export const data: SeedData = {
   photos: [
-
     {
       images: ["IMG_1091.JPG"],
       slug: "img_3_2022",
@@ -20,12 +19,12 @@ export const data: SeedData = {
     },
 
     {
-      images: ["IMG_1448.JPG"],
-      slug: "img_5_2022",
-    },
-    {
       images: ["IMG_0803.JPG"],
       slug: "img_5_2022_pileta_negro",
+    },
+    {
+      images: ["IMG_1622.JPG"],
+      slug: "img_5_2022",
     },
 
     {
@@ -36,7 +35,7 @@ export const data: SeedData = {
       images: ["IMG_2285.JPG"],
       slug: "img_6_2022",
     },
-    
+
     {
       images: ["IMG_0965.JPG"],
       slug: "img_2_2022",
@@ -45,7 +44,10 @@ export const data: SeedData = {
       images: ["IMG_2301.JPG"],
       slug: "img_14_2022",
     },
-
+    {
+      images: ["IMG_1448.JPG"],
+      slug: "img_5_2022",
+    },
     {
       images: ["IMG_2286.JPG"],
       slug: "img_7_2022",
@@ -66,6 +68,5 @@ export const data: SeedData = {
       images: ["IMG_2295.JPG"],
       slug: "img_11_2022",
     },
-
   ],
 };
