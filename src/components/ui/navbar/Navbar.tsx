@@ -7,6 +7,7 @@ import { SiVsco } from "react-icons/si";
 
 import { bodyFont, titleFont } from '@/config/fonts'
 import { useUIStore } from '@/store/ui/store';
+import { usePathname } from 'next/navigation';
 
 
 
@@ -15,6 +16,8 @@ const Navbar = () => {
     const isSideMenuOpen = useUIStore((state) => state.isSideMenuOpen);
     const openSideMenu = useUIStore((state) => state.openSideMenu);
     const closeMenu = useUIStore((state) => state.closeSideMenu);
+    const pathname = usePathname()
+
 
     const handleButtonClick = () => {
         if (isSideMenuOpen) {
@@ -39,9 +42,11 @@ const Navbar = () => {
             {/* menu  */}
 
             <div className='hidden sm:flex items-center text-white'>
-                <Link href='/' className='m-1 p-1 text-md transition-all font-light'>
-                    Home
-                </Link>
+                {pathname === '/about' && (
+                    <Link href='/' className='m-1 p-1 text-md transition-all font-light'>
+                        Home
+                    </Link>
+                )}
                 <Link href='/about' className='m-1 p-1 text-md transition-all font-light'>
                     About
                 </Link>
@@ -73,29 +78,33 @@ const Navbar = () => {
 
             {
                 isSideMenuOpen && (
-                    <div className='min-w-[70vw] min-h-[60vw]  justify-between z-30 items-center fixed top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 bg-white/60 rounded-lg py-20'>
+                    <div className={`min-w-[70vw] min-h-[60vw] justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${pathname === '/about' ? 'bg-black/60' : 'bg-white/60'} rounded-lg py-20`}>
                         <nav className='flex items-center flex-col justify-center my-8 py-1'>
-                            <Link href='/' className=' text-md transition-all font-medium text-black' onClick={closeMenu}>
-                                Home
-                            </Link>
-                            <Link href='/about' className=' text-md transition-all font-medium text-black' onClick={closeMenu}>
+                            {
+                                pathname === '/about' && (
+                                    <Link href='/' className={` text-md transition-all font-medium ${pathname === '/about' ? 'text-white' : 'text-black'} `} onClick={closeMenu}>
+                                        Home
+                                    </Link>
+                                )
+                            }
+                            <Link href='/about' className={` text-md transition-all font-medium ${pathname === '/about' ? 'text-white' : 'text-black'} `} onClick={closeMenu}>
                                 About
                             </Link>
-                            <Link href='mailto:benjalavalla@gmail.com' className='text-md transition-all font-medium text-black' onClick={closeMenu}>
+                            <Link href='mailto:benjalavalla@gmail.com' className={` text-md transition-all font-medium ${pathname === '/about' ? 'text-white' : 'text-black'} `} onClick={closeMenu}>
                                 Contact
                             </Link>
                         </nav>
                         <nav className='relative flex justify-center bottom-5'>
-                            <Link href='https://www.instagram.com/benjalavalla/' target='_blank' className='mx-1 text-black' onClick={closeMenu}>
+                            <Link href='https://www.instagram.com/benjalavalla/' target='_blank' className={`mx-1 ${pathname === '/about' ? 'text-white' : 'text-black'}`} onClick={closeMenu}>
                                 <IoLogoInstagram size={20} />
                             </Link>
 
-                            <Link href='https://wa.me/5492494018575' target='_blank' className='mx-1 text-black' onClick={closeMenu}>
+                            <Link href='https://wa.me/5492494018575' target='_blank' className={`mx-1 ${pathname === '/about' ? 'text-white' : 'text-black'}`} onClick={closeMenu}>
                                 <IoLogoWhatsapp size={20} />
                             </Link>
 
 
-                            <Link href='https://vsco.co/benjalavalla/gallery' target='_blank' className='mx-1 text-black' onClick={closeMenu}>
+                            <Link href='https://vsco.co/benjalavalla/gallery' target='_blank' className={`mx-1 ${pathname === '/about' ? 'text-white' : 'text-black'}`} onClick={closeMenu}>
                                 <SiVsco size={20} />
                             </Link>
                         </nav>
