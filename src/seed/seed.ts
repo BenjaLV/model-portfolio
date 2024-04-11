@@ -10,6 +10,43 @@ interface SeedData {
 export const data: SeedData = {
   photos: [
     {
+      images: ["01.jpg"],
+      slug: "img_1_2024",
+    },
+    {
+      images: ["02.jpg"],
+      slug: "img_2_2024",
+    },
+    {
+      images: ["03.jpg"],
+      slug: "img_3_2024",
+    },
+    {
+      images: ["04.jpg"],
+      slug: "img_4_2024",
+    },
+    {
+      images: ["05.jpg"],
+      slug: "img_5_2024",
+    },
+    {
+      images: ["06.jpg"],
+      slug: "img_6_2024",
+    },
+    {
+      images: ["10.jpg"],
+      slug: "img_7_2024",
+    },
+    {
+      images: ["11.jpg"],
+      slug: "img_8_2024",
+    },
+    {
+      images: ["105.jpg"],
+      slug: "img_9_2024",
+    },
+
+    {
       images: ["IMG_1091.JPG"],
       slug: "img_3_2022",
     },
